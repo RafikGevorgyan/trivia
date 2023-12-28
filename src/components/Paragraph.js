@@ -3,7 +3,9 @@ import React from 'react';
 function Paragraph({ children, className, ...props }) {
     return (
         <div
-            className={'font-bold text-[30px] text-dark-gray leading-[45px] text-center ' + (className || '')}
+            className={
+                'font-bold text-[30px] text-dark-gray leading-[45px] text-center cursor-default ' + (className || '')
+            }
             {...props}
         >
             {children}
