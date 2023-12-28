@@ -25,7 +25,7 @@ function Quiz() {
         const url = API + '?amount=10&category=' + id;
         fetch(url)
             .then((res) => res.json())
-            .then((data) => data.results?.length && setData(data.results))
+            .then((data) => setData(data.results))
             .finally(() => setIsLoadng(false))
             .catch((err) => console.error(err));
     }, [id]);
@@ -39,7 +39,6 @@ function Quiz() {
 
     function handleAnswer(option) {
         if (option === correct_answer) {
-            console.log('correct');
             correctAnswersCount.current++;
         }
 
