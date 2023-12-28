@@ -26,8 +26,8 @@ function Quiz() {
         fetch(url)
             .then((res) => res.json())
             .then((data) => setData(data.results))
-            .finally(() => setIsLoadng(false))
-            .catch((err) => console.error(err));
+            .catch((err) => console.error(err))
+            .finally(() => setIsLoadng(false));
     }, [id]);
 
     if (isLoading) {
@@ -51,7 +51,7 @@ function Quiz() {
 
     return (
         <div className='flex flex-col flex-1 items-center'>
-            <Title>Questions 0{questionNumber}</Title>
+            <Title>Questions {questionNumber < 10 ? '0' + questionNumber : questionNumber}</Title>
             <Indicator difficulty={difficulty} />
             <Paragraph
                 dangerouslySetInnerHTML={{ __html: question }}
