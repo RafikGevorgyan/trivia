@@ -30,7 +30,7 @@ function Home() {
 
     return (
         <div className='flex flex-col flex-1 items-center'>
-            <Title text={'Trivia App'}>Trivia App</Title>
+            <Title>Trivia App</Title>
             <Paragraph className={'mt-[146px]'}>Pick a Category</Paragraph>
             <DropDown
                 values={values}
