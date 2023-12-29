@@ -31,7 +31,7 @@ function App() {
     ]);
 
     return (
-        <div className={'min-w-80 max-w-[1920px] h-screen flex bg-light-gray'}>
+        <div className={'min-w-80 max-w-[1920px] min-h-screen flex bg-light-gray'}>
             <Suspense fallback={null}>{element}</Suspense>
         </div>
     );
